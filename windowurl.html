@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>get file input full pathtitle</title>
+<script language='javascript'>
+function func(){
+  var fileObj=document.getElementById("file");
+     // 注意这里
+     // fileObj.files[0];
+     var src = window.URL.createObjectURL(fileObj.files[0]);
+     var img = document.createElement('img');
+     img.src = src;
+     document.body.appendChild(img);
+}
+</script>
+</head>
+<body>
+<input type="file" onchange="func()" id="file" name="file"/>
+</body>
+</html>
